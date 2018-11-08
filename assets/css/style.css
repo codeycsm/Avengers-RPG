@@ -1,0 +1,38 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  font-size: 3em;
+  text-align: right;
+  margin: 0 20px 0 0;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+h2 {
+  font-size: 1.8em;
+  margin: 20px 0;
+}
+img {
+  height: 12em;
+  margin: 0 10px;
+  border: 10px solid black;
+}
+.battleGround {
+  display: flex;
+  flex-direction: row;
+}
+#battle {
+  height: 2.5em;
+  width: 6em;
+}
+#button {
+  padding: 50px 0 0 0;
+}
+#playerHealth,
+#enemyHealth {
+  text-align: center;
+}

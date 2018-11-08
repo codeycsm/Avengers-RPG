@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <title>Hero RPG</title>
+  </head>
+
+  <body>
+    <h1>Avengers RPG</h1>
+    <div class="container">
+      <h2 id="selectChar">Select Your Character</h2>
+      <div id="chars"></div>
+      <div>
+        <h2>Enemies to Defeat</h2>
+        <p id="enemiesToDefeat"></p>
+      </div>
+      <h2>Battle Ground</h2>
+      <div class="battleGround">
+        <div>
+          <p id="player"></p>
+          <p id="playerHealth"></p>
+        </div>
+        <div id="button"><button id="battle">Battle</button></div>
+        <div>
+          <p id="enemy"></p>
+          <p id="enemyHealth"></p>
+        </div>
+      </div>
+      <div>
+        <h2>Enemies Defeated</h2>
+        <p id="defeated"></p>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="assets/js/game.js"></script>
+</html>
