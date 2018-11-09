@@ -1,37 +1,38 @@
 // player stats & enemy stats
 let player = {};
 let enemy = {};
+let baseAttack;
 // Characters
 let ironman = {
   id: 0,
   img:
     "<img id='ironman' src='assets/imgs/ironman2.png' alt='Ironman Image' value='0'>",
   name: "Ironman",
-  health: 0,
-  attack: 0
+  health: 200,
+  attack: 15
 };
 let thanos = {
   id: 1,
   img:
     "<img id='thanos' src='assets/imgs/thanos.png' alt='Thanos Image' value='1'>",
   name: "Thanos",
-  health: 0,
-  attack: 0
+  health: 100,
+  attack: 25
 };
 let hulk = {
   id: 2,
   img: "<img id='hulk' src='assets/imgs/hulk.png' alt='Hulk Image' value='2'>",
   name: "Hulk",
-  health: 0,
-  attack: 0
+  health: 150,
+  attack: 20
 };
 let ultron = {
   id: 3,
   img:
     "<img id='ultron' src='assets/imgs/ultron.png' alt='Ultron Image' value='3'>",
   name: "Ultron",
-  health: 0,
-  attack: 0
+  health: 200,
+  attack: 10
 };
 // battle enemy button function
 $("#battle").click(function() {
@@ -48,7 +49,7 @@ $("#battle").click(function() {
     );
     player.health -= enemy.attack;
     enemy.health -= player.attack;
-    player.attack += player.attack;
+    player.attack += baseAttack;
     $("#playerHealth").html("Health: " + player.health);
     $("#playerAttack").html("Attack: " + player.attack);
     $("#enemyHealth").html("Health: " + enemy.health);
@@ -58,7 +59,7 @@ $("#battle").click(function() {
 });
 //displays characters to choose from
 function displayChars() {
-  $("#chars").append(ironman.img + hulk.img + ultron.img + thanos.img);
+  $("#chars").html(ironman.img + hulk.img + ultron.img + thanos.img);
   selectChar();
 }
 // selects your character to fight with
@@ -77,8 +78,7 @@ function selectChar() {
       player = jQuery.extend({}, ultron);
       $("#enemiesToDefeat").html(ironman.img + thanos.img + hulk.img);
     }
-    player.health = Math.floor(Math.random() * 400) + 100;
-    player.attack = Math.floor(Math.random() * 3) + 1;
+    baseAttack = player.attack;
     $("#chars").empty();
     $("#player").html(this);
     $("#playerHealth").html("Health: " + player.health);
@@ -102,8 +102,6 @@ function enemyToBattle() {
     if ($(this).attr("value") == ultron.id) {
       enemy = jQuery.extend({}, ultron);
     }
-    enemy.health = Math.floor(Math.random() * 100) + 300;
-    enemy.attack = Math.floor(Math.random() * 30) + 20;
     this.remove();
     $("#enemy").html(this);
     $("#enemyHealth").html("Health: " + enemy.health);
