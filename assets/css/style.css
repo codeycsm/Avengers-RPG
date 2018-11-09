@@ -16,6 +16,7 @@ body {
   height: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 15em;
 }
 h1 {
   font-size: 3em;
@@ -35,16 +36,19 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 15px;
 }
 #battle {
   height: 2.5em;
   width: 6em;
 }
 #button {
-  padding: 50px 0 0 0;
+  padding: 50px 15px;
 }
 #playerHealth,
-#enemyHealth {
+#enemyHealth,
+#playerAttack,
+#enemyAttack {
   text-align: center;
   margin-bottom: 10px;
 }
