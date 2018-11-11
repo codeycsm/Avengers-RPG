@@ -7,52 +7,48 @@ body {
   background-image: url(../imgs/avengersLogo.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   color: #fff;
 }
-.container {
+.container-fluid {
   width: 100%;
-  min-height: calc(100% - 100px);
   height: 100%;
+  min-height: calc(100% + 320px);
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
-  padding-bottom: 15em;
 }
+
 h1 {
   font-size: 3em;
   text-align: right;
-  padding: 10px 10px 20px 0;
   color: red;
   font-weight: bold;
+  margin-right: 1em;
 }
 h2 {
   font-size: 1.8em;
 }
 img {
   height: 12em;
-  padding: 0 10px;
+  margin: 0 1em;
 }
-.stats {
-  width: 100%;
-  margin-bottom: 10em;
-}
-.battleGround {
+#battleGround {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 15px;
 }
 #battle {
   height: 2.5em;
   width: 6em;
-}
-#button {
-  padding: 50px 15px;
+  margin-top: 3em;
 }
 #playerHealth,
 #enemyHealth,
 #playerAttack,
 #enemyAttack {
   text-align: center;
-  margin-bottom: 10px;
+  margin: 0;
+}
+footer {
+  width: 100%;
 }
