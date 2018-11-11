@@ -135,6 +135,7 @@ function checkForDeath() {
     }, 300);
   } else if (enemy.health <= 0) {
     $("#enemyAttackText").empty();
+    $("#playerAttackText").empty();
     $("#enemyAttack").empty();
     $("#enemyHealth").empty();
     $("#enemy").empty();
