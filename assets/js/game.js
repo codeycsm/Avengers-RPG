@@ -66,6 +66,7 @@ function displayChars() {
 function selectChar() {
   $("#chars img").click(function() {
     if ($(this).attr("value") == ironman.id) {
+      console.log(this);
       player = jQuery.extend({}, ironman);
       $("#enemiesToDefeat").html(thanos.img + hulk.img + ultron.img);
     } else if ($(this).attr("value") == thanos.id) {
