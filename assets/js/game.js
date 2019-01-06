@@ -31,7 +31,7 @@ let ultron = {
   img:
     "<img id='ultron' src='assets/imgs/ultron.png' alt='Ultron Image' value='3'>",
   name: "Ultron",
-  health: 200,
+  health: 180,
   attack: 10
 };
 // battle enemy button function
