@@ -59,12 +59,14 @@ $("#battle").click(function() {
 });
 //displays characters to choose from
 function displayChars() {
+  $("#enemies, #battleContainer, #defeatedContainer").hide();
   $("#chars").html(ironman.img + hulk.img + ultron.img + thanos.img);
   selectChar();
 }
 // selects your character to fight with
 function selectChar() {
   $("#chars img").click(function() {
+    $("#enemies, #battleContainer, #defeatedContainer").show();
     if ($(this).attr("value") == ironman.id) {
       console.log(this);
       player = jQuery.extend({}, ironman);
