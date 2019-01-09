@@ -12,4 +12,4 @@ Select a character to battle with, the other three characters become enemies to 
 - Bootstrap
 - jQuery
 
-[Play](https://codeycsm.github.io/Avengers-RPG/)
+# [Play](https://codeycsm.github.io/Avengers-RPG/)
