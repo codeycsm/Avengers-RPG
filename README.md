@@ -1,11 +1,13 @@
-<<<<<<< HEAD
-# unit-4-game
-=======
-# AVENGERS RPG
+# Avengers Role Play Game
 
-Objective
+### Rundown
 
-1. Select a character to fight with.
-2. Select a character to battle.
-3. Defeat all the characters before your life reaches 0.
->>>>>>> cab628ac88b4737a38cb2fdfb496d48aa30b604d
+There are 4 characters to chose from: Ironman, Hulk, Ultron, or Thanos.
+Select a character to battle with, the other three characters become enemies to defeat. Defeat all three enemies to win the game.
+
+### Technologies Used
+
+- HTML
+- CSS
+- Bootstrap
+- jQuery
