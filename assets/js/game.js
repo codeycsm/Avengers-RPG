@@ -59,14 +59,14 @@ $("#battle").click(function() {
 });
 //displays characters to choose from
 function displayChars() {
-  $("#enemies, #battleContainer, #defeatedContainer").hide();
+  $("#enemies, #battleContainer, #button, #defeatedContainer").hide();
   $("#chars").html(ironman.img + hulk.img + ultron.img + thanos.img);
   selectChar();
 }
 // selects your character to fight with
 function selectChar() {
   $("#chars img").click(function() {
-    $("#enemies, #battleContainer, #defeatedContainer").show();
+    $("#enemies, #battleContainer,#defeatedContainer").show();
     if ($(this).attr("value") == ironman.id) {
       console.log(this);
       player = jQuery.extend({}, ironman);
@@ -95,15 +95,15 @@ function enemyToBattle() {
   $("#enemiesToDefeat img").click(function() {
     if ($(this).attr("value") == ironman.id) {
       enemy = jQuery.extend({}, ironman);
-    }
-    if ($(this).attr("value") == thanos.id) {
+    } else if ($(this).attr("value") == thanos.id) {
       enemy = jQuery.extend({}, thanos);
-    }
-    if ($(this).attr("value") == hulk.id) {
+    } else if ($(this).attr("value") == hulk.id) {
       enemy = jQuery.extend({}, hulk);
-    }
-    if ($(this).attr("value") == ultron.id) {
+    } else if ($(this).attr("value") == ultron.id) {
       enemy = jQuery.extend({}, ultron);
+    }
+    if (player.name !== {} && enemy.name !== {}) {
+      $("#button").show();
     }
     this.remove();
     $("#enemy").html(this);
@@ -137,6 +137,7 @@ function checkForDeath() {
       resetGame();
     }, 300);
   } else if (enemy.health <= 0) {
+    $("#button").hide();
     $("#enemyAttackText").empty();
     $("#playerAttackText").empty();
     $("#enemyAttack").empty();
